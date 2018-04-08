@@ -14,6 +14,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding("utf8")
 import json
+import scraperwiki
 
 def get_politico(uri):
     session = requests.Session()
@@ -239,6 +240,8 @@ for x in [0,1]:
                 output[gov][len(output[gov])-2]={'given_name':info[0], 'family_name': info[1],'gender':info[2],'birth_date':info[3],'birth_location':info[4],'profession':info[5],'image': info[6], 'senato_identifier':info[7], 'label':carica,'role':ministero,'start_date':data_inizio, 'end_date':data_fine, 'death_date': info[8]}
 
 
-scraperwiki.sqlite.save(unique_keys=['storico_governi'], data=json.dumps(output))
+                dt = datetime.now()
+                output['date'] = dt
+                scraperwiki.sqlite.save(unique_keys=['date'], data=json.dumps(output))
 
 
