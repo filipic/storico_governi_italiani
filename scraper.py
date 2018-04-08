@@ -237,7 +237,7 @@ for x in range(0,1):
                 output[gov][len(output[gov])-2]={'given_name':info[0], 'family_name': info[1],'gender':info[2],'birth_date':info[3],'birth_location':info[4],'profession':info[5],'image': info[6], 'senato_identifier':info[7], 'label':carica,'role':ministero,'start_date':data_inizio, 'end_date':data_fine, 'death_date': info[8]}
 
 print "FINE"
-output['date'] = '20180408'
+output={'date':'20180408', 'governo':'gentiloni', 0:{'nome':'pippo', 'cognome':'civati'}, 1:{'nome':'pippo1', 'cognome':'civati2'}}
 print json.dumps(output)
 scraperwiki.sqlite.save(unique_keys=['date'], data=json.dumps(output))
 
