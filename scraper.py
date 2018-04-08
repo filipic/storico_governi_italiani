@@ -5,7 +5,7 @@ Input:
 '''
 import requests
 import csv
-import datetime
+from datetime import datetime
 import locale
 locale.setlocale(locale.LC_ALL, 'it_IT.UTF-8')
 from bs4 import BeautifulSoup
