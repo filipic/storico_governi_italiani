@@ -165,7 +165,7 @@ for gov in govs:
         leg=url['href'].split('leg=')
         leg=leg[1].split('&')
         if '-' not in leg[0]:
-            if data_fine!='':
+            if data_fine=='':
                 governiList.update({nome_governo : {'data_inizio':data_inizio, 'data_fine':data_fine, 'url':url['href'], 'legislatura':leg[0]}})
 
 # prende la pagina di ogni singolo governo
