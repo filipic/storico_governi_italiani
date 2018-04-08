@@ -167,7 +167,7 @@ for gov in govs:
 
 print governiList
 # prende la pagina di ogni singolo governo
-for x in [0,1]:
+for x in [0,0]:
     for gov in governiList:
         if x==0:
             uri='http://www.senato.it'+governiList[gov]['url']
