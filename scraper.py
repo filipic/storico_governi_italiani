@@ -1,13 +1,8 @@
-'''
-Input:
-1. 0=tutti i governi; 1=solo quello corrente; 2=solo quelli passati (storico)
-2. file di destinazione dell'output con estensione del file (csv|json)
-'''
 import requests
 import csv
 import datetime
 import locale
-locale.setlocale(locale.LC_ALL, 'it_IT.UTF-8')
+locale.setlocale(locale.LC_ALL, 'it_IT')
 from bs4 import BeautifulSoup
 import os.path
 import sys
@@ -168,7 +163,9 @@ for gov in govs:
         if '-' not in leg[0]:
             if data_fine=='':
                 governiList.update({nome_governo : {'data_inizio':data_inizio, 'data_fine':data_fine, 'url':url['href'], 'legislatura':leg[0]}})
+                
 
+print governiList
 # prende la pagina di ogni singolo governo
 for x in [0,1]:
     for gov in governiList:
