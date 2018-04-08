@@ -126,7 +126,7 @@ def get_date(stringa):
 governiList = {}
 output= {}
 
-
+'''
 # prende la pagina di indice generale dei governi e la mette nella lista governiList
 url_lista="http://www.senato.it/leg/ElencoMembriGoverno/Governi.html"
 session = requests.Session()
@@ -238,6 +238,7 @@ for x in range(0,1):
                     output.update({gov:{'start_date':governiList[gov]['data_inizio'], 'end_date':governiList[gov]['data_fine'], 'legislatura': governiList[gov]['legislatura']}})
                 output[gov][len(output[gov])-2]={'given_name':info[0], 'family_name': info[1],'gender':info[2],'birth_date':info[3],'birth_location':info[4],'profession':info[5],'image': info[6], 'senato_identifier':info[7], 'label':carica,'role':ministero,'start_date':data_inizio, 'end_date':data_fine, 'death_date': info[8]}
 
+'''
 print "FINE"
 output={'id':'20180408', 'governo':'gentiloni', 'nome':'pippo', 'cognome':'civati'}
 print json.dumps(output)
