@@ -239,6 +239,6 @@ for x in range(0,1):
 print "FINE"
 output={'date':'20180408', 'governo':'gentiloni', 0:{'nome':'pippo', 'cognome':'civati'}, 1:{'nome':'pippo1', 'cognome':'civati2'}}
 print json.dumps(output)
-scraperwiki.sqlite.save(unique_keys=['date'], data=json.dumps(output))
+scraperwiki.sqlite.save(unique_keys=['date'], data=output)
 
 
