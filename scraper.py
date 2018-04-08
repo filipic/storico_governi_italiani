@@ -238,7 +238,7 @@ for x in range(0,1):
 
 print "FINE"
 output['date'] = '20180408'
-print output
+print json.dumps(output)
 scraperwiki.sqlite.save(unique_keys=['date'], data=json.dumps(output))
 
 
