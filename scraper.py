@@ -6,7 +6,6 @@ Input:
 import requests
 import csv
 import datetime
-from datetime import datetime
 import locale
 locale.setlocale(locale.LC_ALL, 'it_IT.UTF-8')
 from bs4 import BeautifulSoup
@@ -241,8 +240,8 @@ for x in [0,1]:
                 output[gov][len(output[gov])-2]={'given_name':info[0], 'family_name': info[1],'gender':info[2],'birth_date':info[3],'birth_location':info[4],'profession':info[5],'image': info[6], 'senato_identifier':info[7], 'label':carica,'role':ministero,'start_date':data_inizio, 'end_date':data_fine, 'death_date': info[8]}
 
 
-                dt = datetime.now()
-                output['date'] = dt
+                
+                output['date'] = '20180408'
                 scraperwiki.sqlite.save(unique_keys=['date'], data=json.dumps(output))
 
 
