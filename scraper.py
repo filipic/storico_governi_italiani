@@ -241,7 +241,7 @@ for x in range(0,1):
 
 print "FINE"
 output['id']='20180408'
-print json.dumps(output)
+print output
 scraperwiki.sqlite.save(unique_keys=['id'], data=output)
 
 
